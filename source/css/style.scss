@@ -542,10 +542,10 @@ body {
 
                 }
             }
+
+
             section.sub-db {
                 div.container {
-                    min-height:300px;
-
                 }
             }
 
@@ -622,8 +622,12 @@ body {
                 p {
                     line-height:1.6;
 
+                    @media (min-width: $screen-size-pc) {
+                        margin:0;
+                    }
+
                     span {
-                        display:block;
+                        display:inline-block;
 
                         @media (min-width: $screen-size-pc) {
                             display:inline;

@@ -1802,10 +1802,6 @@ body div#content.sub section.sub-navigation div.container strong i.bx-chevron-ri
           transform: translateY(-50%);
 }
 
-body div#content.sub section.sub-db div.container {
-  min-height: 300px;
-}
-
 body footer#footer {
   text-align: center;
   background: #F4F4F4;
@@ -1873,8 +1869,14 @@ body footer#footer div.container address p {
   line-height: 1.6;
 }
 
+@media (min-width: 1200px) {
+  body footer#footer div.container address p {
+    margin: 0;
+  }
+}
+
 body footer#footer div.container address p span {
-  display: block;
+  display: inline-block;
 }
 
 @media (min-width: 1200px) {
