@@ -6,10 +6,25 @@ $(function () {
     var windowW = $(window).width();
 
 
+    function pcmenu() {
+
+        $(document).on("mousemove", function(e){
+            if (windowW > 1200 && e.pageY > 300) {
+                $("nav#main-menu").removeClass("on");
+            }
+        });
+    }
+
+    pcmenu();
+
 
     $(window).on("resize", function(){
         
+        windowh = $(window).height();
+        windowW = $(window).width();
+        
         $("nav#main-menu h3 a").unbind();
+        pcmenu();
     });
 
 
@@ -43,12 +58,6 @@ $(function () {
 
     $("nav#main-menu").on("mouseenter", function(){
         $(this).addClass("on");
-    });
-
-    $(document).on("mousemove", function(e){
-        if (windowW > 1200 && e.pageY > 300) {
-            $("nav#main-menu").removeClass("on");
-        }
     });
 
 
