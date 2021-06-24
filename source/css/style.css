@@ -481,14 +481,6 @@ div#content.sub05 div.sub-head.fix {
   width: 100%;
 }
 
-@media (min-width: 1200px) {
-  .pagenation {
-    margin: 0 0 50px;
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
-  }
-}
-
 .pagenation a {
   background: white;
 }
@@ -498,20 +490,19 @@ div#content.sub05 div.sub-head.fix {
   overflow: hidden;
   display: inline-block;
   vertical-align: top;
-  font-size: 12px;
+  font-size: 14px;
   color: #999999;
-  border: 1px solid transparent;
+  border: 1px solid #999;
   width: 24px;
   line-height: 22px;
   margin: 0 2px;
-  border-radius: 50%;
 }
 
 @media (min-width: 1200px) {
   .pagenation a,
   .pagenation strong {
-    width: 26px;
-    line-height: 24px;
+    width: 32px;
+    line-height: 30px;
     font-size: 16px;
   }
 }
@@ -521,7 +512,7 @@ div#content.sub05 div.sub-head.fix {
 .pagenation strong.move {
   font-size: 0;
   position: relative;
-  border: 1px solid #999999;
+  border: 1px solid #ccc;
 }
 
 .pagenation a.jump i, .pagenation a.move i,
@@ -538,7 +529,9 @@ div#content.sub05 div.sub-head.fix {
 
 .pagenation .active,
 .pagenation strong {
-  color: #555;
+  color: #fff;
+  background: #2C4988;
+  border-color: #2C4988;
   font-weight: normal;
   font-weight: 500;
 }
@@ -1766,6 +1759,7 @@ body div#content.sub section.sub-empty div.container {
   font-size: 40px;
   font-weight: 800;
   color: #999;
+  word-break: keep-all;
 }
 
 body div#content.sub section.sub-empty div.container i {
@@ -1889,6 +1883,12 @@ body div#content.sub article.board-list div.container ul.list li a {
   border-bottom: 1px solid #ccc;
 }
 
+@media (min-width: 1200px) {
+  body div#content.sub article.board-list div.container ul.list li a {
+    padding: 20px 0;
+  }
+}
+
 body div#content.sub article.board-list div.container ul.list li a h5 {
   margin: 0 0 6px;
   font-size: 15px;
@@ -1898,25 +1898,260 @@ body div#content.sub article.board-list div.container ul.list li a h5 {
   word-break: keep-all;
   overflow: hidden;
   text-overflow: ellipsis;
+  vertical-align: top;
 }
 
 body div#content.sub article.board-list div.container ul.list li a h5 span {
   display: none;
 }
 
-@media (min-width: 1200px) {
-  body div#content.sub article.board-list div.container ul.list li a h5 span {
-    display: block;
-  }
+body div#content.sub article.board-list div.container ul.list li a h5 i {
+  font-size: 20px;
+  vertical-align: bottom;
+  color: #555;
+  margin: 0 0 0 10px;
+  background: #efefef;
+  padding: 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 body div#content.sub article.board-list div.container ul.list li a p {
   margin: 0 10px 0 0;
+  font-size: 14px;
   display: inline-block;
+  vertical-align: top;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-list div.container ul.list li a p {
+    position: relative;
+    margin: 0;
+  }
+  body div#content.sub article.board-list div.container ul.list li a p span {
+    display: none;
+  }
 }
 
 body div#content.sub article.board-list div.container ul.list li a p.num, body div#content.sub article.board-list div.container ul.list li a p.count {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-list div.container ul.list li a p.num, body div#content.sub article.board-list div.container ul.list li a p.count {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-list div.container ul.list li a p {
+    text-align: center;
+  }
+  body div#content.sub article.board-list div.container ul.list li a p.num {
+    width: 80px;
+  }
+  body div#content.sub article.board-list div.container ul.list li a p.name {
+    width: 120px;
+  }
+  body div#content.sub article.board-list div.container ul.list li a p.date {
+    width: 120px;
+  }
+  body div#content.sub article.board-list div.container ul.list li a p.count {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-list div.container ul.list li a h5 {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    width: calc(100% - (80px + 120px + 120px + 100px));
+    overflow: visible;
+  }
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-list div.container ul.list li {
+    position: relative;
+    font-size: 0;
+  }
+  body div#content.sub article.board-list div.container ul.list li span {
+    display: none;
+  }
+  body div#content.sub article.board-list div.container ul.list li:first-child {
+    margin-top: 65px;
+  }
+  body div#content.sub article.board-list div.container ul.list li:first-child::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -64px;
+    height: 64px;
+    background: #efefef;
+    border-bottom: 1px solid #ccc;
+  }
+  body div#content.sub article.board-list div.container ul.list li:first-child span {
+    display: block;
+    position: absolute;
+    top: -63px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+body div#content.sub article.board-view-head div.container {
+  text-align: center;
+}
+
+body div#content.sub article.board-view-head div.container h4 {
+  padding-top: 15px;
+  border-top: 4px solid #423B84;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  word-break: keep-all;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-head div.container h4 {
+    padding-top: 25px;
+    font-size: 30px;
+    margin: 0 0 15px;
+  }
+}
+
+body div#content.sub article.board-view-head div.container div.info {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-head div.container div.info {
+    padding-bottom: 25px;
+  }
+}
+
+body div#content.sub article.board-view-head div.container div.info span {
+  padding: 0 6px;
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-head div.container div.info span {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+}
+
+body div#content.sub article.board-view-file div.container {
+  padding-left: 130px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-file div.container {
+    padding-left: 180px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+}
+
+body div#content.sub article.board-view-file div.container h5 {
+  position: absolute;
+  left: 25px;
+  top: 15px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-file div.container h5 {
+    top: 25px;
+    font-size: 20px;
+  }
+}
+
+body div#content.sub article.board-view-file div.container a {
+  display: block;
+  position: relative;
+  word-break: keep-all;
+  padding: 0 0 10px;
+  color: #0066CC;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+body div#content.sub article.board-view-file div.container a i {
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  color: #999;
+}
+
+body div#content.sub article.board-view-image div.container div.outline {
+  border-top: 1px solid #ccc;
+  padding: 20px 20px 10px;
+  font-size: 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-image div.container div.outline {
+    padding: 25px 20px 15px;
+  }
+}
+
+body div#content.sub article.board-view-image div.container div.outline img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+body div#content.sub article.board-view-text div.container {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-text div.container {
+    margin-bottom: 40px;
+  }
+}
+
+body div#content.sub article.board-view-text div.container div.text-wrap {
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  padding: 20px;
+  min-height: 200px;
+}
+
+body div#content.sub article.board-view-tools div.container {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.board-view-tools div.container {
+    margin-bottom: 50px;
+  }
+}
+
+body div#content.sub article.board-view-tools div.container a.list {
+  display: block;
+  width: 200px;
+  background: #575757;
+  margin: 0 auto;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 body footer#footer {

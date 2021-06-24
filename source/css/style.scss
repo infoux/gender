@@ -507,6 +507,7 @@ body {
                     font-size:40px;
                     font-weight:800;
                     color:#999;
+                    word-break: keep-all;
 
                     i {
                         display:block;
@@ -632,6 +633,12 @@ body {
             
             article.board-list {
                 
+                $board-num-width: 80px;
+                $board-name-width: 120px;
+                $board-date-width: 120px;
+                $board-count-width: 100px;
+
+
                 div.container {
                     
                     ul.list {
@@ -647,6 +654,13 @@ body {
                                 padding:15px 0;
                                 border-bottom:1px solid #ccc;
 
+                                @media (min-width: $screen-size-pc) {
+
+                                    padding:20px 0;
+
+                                }
+
+
                                 h5 {
                                     margin:0 0 6px;
                                     font-size:15px;
@@ -656,33 +670,280 @@ body {
                                     word-break:keep-all;
                                     overflow:hidden;
                                     text-overflow:ellipsis;
+                                    vertical-align:top;
 
                                     span {
                                         display:none;
                                     }
 
-                                    @media (min-width: $screen-size-pc) {
-
-                                        span {
-                                            display:block;
-                                        }
+                                    i {
+                                        font-size:20px;
+                                        vertical-align:bottom;
+                                        color:#555;
+                                        margin:0 0 0 10px;
+                                        background:#efefef;
+                                        padding:2px;
+                                        border-radius:5px;
+                                        @include drop-shadow($x:0,$y: 1px, $blur: 1px, $spread: 0, $alpha: 0.25);
                                     }
                                 }
 
                                 p {
                                     margin:0 10px 0 0;
+                                    font-size:14px;
                                     display:inline-block;
+                                    vertical-align:top;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        position:relative;
+                                        margin:0;
+                                        
+                                        span {
+                                            display:none;
+                                        }
+                                    }
+
+
 
                                     &.num,
                                     &.count {
                                         display:none;
+
+                                        @media (min-width: $screen-size-pc) {
+                                            display:inline-block;
+                                        }
+                                    }
+
+                                    @media (min-width: $screen-size-pc) {
+
+                                        text-align:center;
+                                        
+                                        &.num {
+                                            width: $board-num-width;
+                                        }
+                                        
+                                        &.name {
+                                            width: $board-name-width;
+                                        }
+                                        
+                                        &.date {
+                                            width: $board-date-width;
+                                        }
+                                        
+                                        &.count {
+                                            width: $board-count-width;
+                                        }
+                                    }
+
+                                    
+                                }
+
+                                @media (min-width: $screen-size-pc) {
+    
+                                    
+    
+                                    h5 {
+                                        display:inline-block;
+                                        position:relative;
+                                        margin:0;
+                                        width:  calc(100% - (#{$board-num-width} + #{$board-name-width} + #{$board-date-width} + #{$board-count-width}));
+
+                                        overflow:visible;
                                     }
                                 }
 
                             }
+
+                            @media (min-width: $screen-size-pc) {
+                                position:relative;
+                                font-size:0;
+
+                                span {
+                                    display:none;
+                                }
+
+                                &:first-child {
+                                    margin-top:65px;
+
+                                    &::before {
+                                        content:"";
+                                        display:block;
+                                        position:absolute;
+                                        left:0;
+                                        right:0;
+                                        top:-64px;
+                                        height:64px;
+                                        background:#efefef;
+                                        border-bottom:1px solid #ccc;
+                                    }
+
+                                    span {
+                                        display:block;
+                                        position:absolute;
+                                        top:-63px;
+                                        left:50%;
+                                        transform: translateX(-50%);
+                                        font-weight:600;
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+
+
+
+                            
                         }
 
 
+                    }
+                }
+            }
+
+            article.board-view-head {
+
+                div.container {
+                    text-align:center;
+
+                    h4 {
+                        padding-top:15px;
+                        border-top:4px solid #423B84;
+                        font-size: 20px;
+                        font-weight:600;
+                        margin:0 0 10px;
+                        word-break:keep-all;
+
+                        @media (min-width: $screen-size-pc) {
+                            padding-top:25px;
+                            font-size:30px;
+                            margin:0 0 15px;
+                        }
+
+                    }
+
+                    div.info {
+                        border-bottom:1px solid #ccc;
+                        padding-bottom:15px;
+
+                        @media (min-width: $screen-size-pc) {
+                            padding-bottom:25px;
+                        }
+
+                        span {
+                            padding:0 6px;
+                            font-size:14px;
+
+                            @media (min-width: $screen-size-pc) {
+                                padding:0 10px;
+                                font-size:16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            article.board-view-file {
+
+                div.container {
+                    padding-left:130px;
+                    padding-top:15px;
+                    padding-bottom:5px;
+
+                    @media (min-width: $screen-size-pc) {
+                        padding-left:180px;
+                        padding-top:25px;
+                        padding-bottom:15px;
+                    }
+
+                    h5 {
+                        position:absolute;
+                        left:25px;
+                        top:15px;
+                        margin:0;
+                        font-size:16px;
+                        font-weight:500;
+
+                        @media (min-width: $screen-size-pc) {
+                            top:25px;
+                            font-size:20px;
+                        }
+                    }
+
+                    a {
+                        display:block;
+                        position:relative;
+                        word-break:keep-all;
+                        padding:0 0 10px;
+                        color:#0066CC;
+                        text-decoration:underline;
+                        font-size:14px;
+
+                        i {
+                            position:absolute;
+                            left:-20px;
+                            top:2px;
+                            color:#999;
+                        }
+                    }
+
+                }
+            }
+
+            article.board-view-image {
+                div.container {
+                    div.outline {
+                        border-top:1px solid #ccc;
+                        padding:20px 20px 10px;
+                        font-size:0;
+
+                        @media (min-width: $screen-size-pc) {
+                            padding:25px 20px 15px;
+                        }
+
+                        img {
+                            max-width:100%;
+                            margin-bottom:10px;
+                        }
+                    }
+                }
+            }
+
+            article.board-view-text {
+                div.container {
+                    margin-bottom:30px;
+
+                    @media (min-width: $screen-size-pc) {
+                        margin-bottom:40px;
+                    }
+
+                    div.text-wrap {
+                        border:1px solid #ccc;
+                        border-left:none;
+                        border-right:none;
+                        padding:20px;
+                        min-height:200px;
+
+                    }
+                }
+            }
+
+            article.board-view-tools {
+                div.container {
+                    margin-bottom:30px;
+
+                    @media (min-width: $screen-size-pc) {
+                        margin-bottom:50px;
+                    }
+
+                    a.list {
+                        display:block;
+                        width:200px;
+                        background:#575757;
+                        margin:0 auto;
+                        line-height:50px;
+                        text-align:center;
+                        color:#fff;
+                        font-size:16px;
+                        font-weight:500;
                     }
                 }
             }
