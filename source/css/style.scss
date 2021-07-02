@@ -432,6 +432,83 @@ body {
 
     }
 
+    
+
+
+    div.layer-pop {
+        display:none;
+        position:fixed;
+        z-index:1000000;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        background:rgba(0,0,0,0.7);
+
+        @media (min-width: $screen-size-pc) {
+
+            position:absolute;
+            left:50%;
+            right:auto;
+            bottom:auto;
+            width:1200px;
+            height:700px;
+            border:5px solid #423B84;
+            transform:translateX(-50%);
+            top:453px;
+            
+        }
+
+        &.on {
+            display:block;
+        }
+
+        div.outline {
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            background:#fff;
+            left:20px;
+            right:20px;
+            height:80%;
+
+            @media (min-width: $screen-size-pc) {
+                left:0;
+                right:0;
+                top:0;
+                margin:0;
+                transform:unset;
+                height:100%;
+                
+            }
+
+            button.close {
+                position:absolute;
+                top:-40px;
+                width:40px;
+                height:40px;
+                right:0;
+                font-size:0;
+                padding:0;
+                margin:0;
+                border:none;
+                background:#423B84;
+
+                @media (min-width: $screen-size-pc) {
+                    right:-5px;
+                    
+                }
+
+                i {
+                    font-size:32px;
+                    color:#fff;
+                }
+            }
+        }
+
+        
+    }
+
 
     div#content {
         position:relative;
@@ -579,18 +656,40 @@ body {
 
             article.db-steps {
 
+                padding:0 0 40px;
+
+                @media (min-width: $screen-size-pc) {
+                    padding:0 0 80px;
+                }
+
                 fieldset.search {
                     border:1px solid #ccc;
                     @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
                     padding:20px;
+                    margin-bottom:40px;
                     text-align:center;
                     font-size:0;
+
+                    @media (min-width: $screen-size-pc) {
+                        position:relative;
+                        padding:40px 40px 40px 800px;
+                    }
+    
 
                     strong {
                         display:block;
                         margin:0 0 10px;
                         font-weight:500;
                         font-size:18px;
+
+                        @media (min-width: $screen-size-pc) {
+                            position:absolute;
+                            left:40px;
+                            top:50%;
+                            transform:translateY(-50%);
+                            font-size:22px;
+                        }
+        
                     }
 
                     input {
@@ -623,6 +722,146 @@ body {
                     }
 
                 }
+
+                div.step {
+                    margin:20px 0 0;
+
+                    @media (min-width: $screen-size-pc) {
+                        margin:0 40px 0 0;
+                        width:300px;
+                        vertical-align:top;
+                        display:inline-block;
+                    }
+
+                    h5 {
+                        position:relative;
+                        line-height:45px;
+                        background:#423B84;
+                        margin:0;
+                        padding:0 20px;
+                        color:#fff;
+                        font-size:18px;
+                        font-weight:500;
+                        @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
+                        cursor:pointer;
+
+                        i {
+                            display:none;
+
+                            @media (min-width: $screen-size-pc) {
+                                display:block;
+                                position:absolute;
+                                right:-44px;
+                                top:100px;
+                                color:#e4e4e4;
+                                font-size:44px;
+                            }
+                        }
+                    }
+
+                    ul {
+                        display:none;
+                        margin:0;
+                        padding:0;
+                        list-style:none;
+                        border:1px solid #423B84;
+                        margin-bottom:20px;
+                        @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
+                        max-height:300px;
+                        overflow-y:scroll;
+
+                        @media (min-width: $screen-size-pc) {
+                            display:block;
+                            max-height:unset;
+                            height:650px;
+                        }
+
+                        li {
+                            
+                            @media (min-width: $screen-size-pc) {
+                                display:none;
+                            }
+
+                            a {
+                                display:block;
+                                padding:15px 10px;
+                                font-size:16px;
+                                border-bottom:1px solid #ccc;
+
+                                &.on {
+                                    color:#423B84;
+                                    background:#F0EFFD;
+                                    font-weight:600;
+                                    border-bottom:2px solid #423B84;
+                                }
+
+                            }
+                        }
+                    }
+
+                    &.on {
+
+                        ul {
+                            display:block;
+
+                            li {
+                            
+                                @media (min-width: $screen-size-pc) {
+                                    display:block;
+                                }
+
+                            }
+                            
+
+                        }
+                    }
+
+
+                    &.step03 {
+
+                        @media (min-width: $screen-size-pc) {
+                            width:510px;
+                            margin:0;
+                        }
+
+                        h5 {
+                            background:#51843B;
+
+                            i {
+                                display:none;
+    
+                                @media (min-width: $screen-size-pc) {
+                                    display:none;
+                                }
+                            }
+                        }
+
+                        ul {
+                            border:1px solid #51843B;
+
+                            li {
+                                a {
+                                    display:block;
+                                    position:relative;
+                                    padding-left:50px;
+
+                                    i {
+                                        position:absolute;
+                                        left:20px;
+                                        font-size:18px;
+                                    }
+
+                                    span {
+                                        display:block;
+                                        font-size:12px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
 
             }
 

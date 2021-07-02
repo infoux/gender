@@ -31,12 +31,14 @@ $(function () {
 
 
     $(".equality .item .outline>ul>li>strong").on("click", function () {
-        $(".equality .item .outline>ul>li>strong.on").removeClass("on");
 
-        if ($(this).hasClass) {
+
+        if ($(this).hasClass("on")) {
             $(this).removeClass("on");
+        } else {
+            $(".equality .item .outline>ul>li>strong.on").removeClass("on");
+            $(this).addClass("on");
         }
-        $(this).toggleClass("on");
     });
 
 
@@ -69,6 +71,39 @@ $(function () {
     $("nav#main-menu").on("mouseenter", function(){
         $(this).addClass("on");
     });
+
+    // $(".db-steps .step h5").on("click", function () {
+    //     $(this).toggleClass("on");
+    // });
+
+    $(".db-steps ul a").on("click", function () {
+
+        if ($(this).hasClass("on")) {
+            $(this).removeClass("on");
+        } else {
+            $(this).parent().parent().find("a").removeClass("on");
+            $(this).addClass("on");
+        }
+
+        if ($(this).parent().parent().parent().hasClass("step01")) {
+            $(".db-steps .step02").addClass("on");
+        }
+
+        if ($(this).parent().parent().parent().hasClass("step02")) {
+            $(".db-steps .step03").addClass("on");
+        }
+
+        if ($(this).parent().parent().parent().hasClass("step03")) {
+            $(".layer-pop").addClass("on");
+        }
+    });
+
+
+
+    $(".layer-pop button.close").on("click", function () {
+        $(".layer-pop").removeClass("on");
+    });
+
 
 
 
