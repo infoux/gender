@@ -1331,27 +1331,24 @@ body {
 
                     li {
                         text-align:center;
+                        display:block;
+                        font-size:15px;
+                        padding:40px 0;
+                        border-bottom:1px solid #ccc;
 
                         @media (min-width: $screen-size-pc) {
                             display:inline-block;
                             width:calc(100% / 3);
                             vertical-align:top;
+                            border-right:1px solid #ccc;
+                            min-height:500px;
+
+                            &:hover {
+                                background:#efefef;
+                            }
                         }
 
-                        a {
-                            display:block;
-                            font-size:15px;
-                            padding:40px 0;
-                            border-bottom:1px solid #ccc;
 
-                            @media (min-width: $screen-size-pc) {
-                                border-right:1px solid #ccc;
-                                min-height:500px;
-
-                                &:hover {
-                                    background:#efefef;
-                                }
-                            }
 
                             h5 {
                                 position:relative;
@@ -1418,11 +1415,16 @@ body {
                             }
 
                             div.text {
-                                p {
+                                a {
+                                    display:block;
                                     margin:0 0 6px;
+
+                                    &:hover {
+                                        text-decoration:underline;
+                                        font-weight:600;
+                                    }
                                 }
                             }
-                        }
                     }
                 }
             }

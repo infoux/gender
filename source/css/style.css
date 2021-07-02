@@ -2510,17 +2510,6 @@ body div#content.sub article.theme-list ul {
 
 body div#content.sub article.theme-list ul li {
   text-align: center;
-}
-
-@media (min-width: 1200px) {
-  body div#content.sub article.theme-list ul li {
-    display: inline-block;
-    width: calc(100% / 3);
-    vertical-align: top;
-  }
-}
-
-body div#content.sub article.theme-list ul li a {
   display: block;
   font-size: 15px;
   padding: 40px 0;
@@ -2528,16 +2517,19 @@ body div#content.sub article.theme-list ul li a {
 }
 
 @media (min-width: 1200px) {
-  body div#content.sub article.theme-list ul li a {
+  body div#content.sub article.theme-list ul li {
+    display: inline-block;
+    width: calc(100% / 3);
+    vertical-align: top;
     border-right: 1px solid #ccc;
     min-height: 500px;
   }
-  body div#content.sub article.theme-list ul li a:hover {
+  body div#content.sub article.theme-list ul li:hover {
     background: #efefef;
   }
 }
 
-body div#content.sub article.theme-list ul li a h5 {
+body div#content.sub article.theme-list ul li h5 {
   position: relative;
   font-size: 20px;
   font-weight: 600;
@@ -2545,7 +2537,7 @@ body div#content.sub article.theme-list ul li a h5 {
   margin: 0 0 20px;
 }
 
-body div#content.sub article.theme-list ul li a h5::after {
+body div#content.sub article.theme-list ul li h5::after {
   content: "";
   display: block;
   position: absolute;
@@ -2558,7 +2550,7 @@ body div#content.sub article.theme-list ul li a h5::after {
           transform: translateX(-50%);
 }
 
-body div#content.sub article.theme-list ul li a h5::before {
+body div#content.sub article.theme-list ul li h5::before {
   content: "";
   display: block;
   margin: 0 auto 30px;
@@ -2566,32 +2558,38 @@ body div#content.sub article.theme-list ul li a h5::before {
   height: 100px;
 }
 
-body div#content.sub article.theme-list ul li a h5.category01::before {
+body div#content.sub article.theme-list ul li h5.category01::before {
   background: url(../images/icon-theme01.svg) no-repeat center/100px auto;
 }
 
-body div#content.sub article.theme-list ul li a h5.category02::before {
+body div#content.sub article.theme-list ul li h5.category02::before {
   background: url(../images/icon-theme02.svg) no-repeat center/100px auto;
 }
 
-body div#content.sub article.theme-list ul li a h5.category03::before {
+body div#content.sub article.theme-list ul li h5.category03::before {
   background: url(../images/icon-theme03.svg) no-repeat center/100px auto;
 }
 
-body div#content.sub article.theme-list ul li a h5.category04::before {
+body div#content.sub article.theme-list ul li h5.category04::before {
   background: url(../images/icon-theme04.svg) no-repeat center/100px auto;
 }
 
-body div#content.sub article.theme-list ul li a h5.category05::before {
+body div#content.sub article.theme-list ul li h5.category05::before {
   background: url(../images/icon-theme05.svg) no-repeat center/100px auto;
 }
 
-body div#content.sub article.theme-list ul li a h5.category06::before {
+body div#content.sub article.theme-list ul li h5.category06::before {
   background: url(../images/icon-theme06.svg) no-repeat center/98px auto;
 }
 
-body div#content.sub article.theme-list ul li a div.text p {
+body div#content.sub article.theme-list ul li div.text a {
+  display: block;
   margin: 0 0 6px;
+}
+
+body div#content.sub article.theme-list ul li div.text a:hover {
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 body div#content.sub article.theme-view {
