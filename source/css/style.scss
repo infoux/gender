@@ -1050,28 +1050,28 @@ body {
                             padding:0;
 
                             li {
+                                display:block;
+                                
                                 a {
                                     display:block;
                                     margin-bottom:10px;
+                                    overflow:hidden;
+                                    text-overflow:ellipsis;
+                                    white-space:nowrap;
 
                                     strong {
                                         display:block;
                                         font-weight:500;
                                         font-size:16px;
-                                        word-break:keep-all;
-                                        white-space:nowrap;
-                                        overflow:hidden;
-                                        text-overflow:ellipse;
                                         margin-bottom:5px;
                                     }
 
                                     span {
                                         display:block;
                                         font-size:12px;
-                                        word-break:keep-all;
-                                        white-space:nowrap;
                                         overflow:hidden;
-                                        text-overflow:ellipse;
+                                        text-overflow:ellipsis;
+                                        white-space:nowrap;
                                     }
                                 }
                             }

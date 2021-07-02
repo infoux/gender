@@ -2298,29 +2298,31 @@ body div#content.main section.main-content div.container div.update-info ul.list
   padding: 0;
 }
 
+body div#content.main section.main-content div.container div.update-info ul.list li {
+  display: block;
+}
+
 body div#content.main section.main-content div.container div.update-info ul.list li a {
   display: block;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 body div#content.main section.main-content div.container div.update-info ul.list li a strong {
   display: block;
   font-weight: 500;
   font-size: 16px;
-  word-break: keep-all;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipse;
   margin-bottom: 5px;
 }
 
 body div#content.main section.main-content div.container div.update-info ul.list li a span {
   display: block;
   font-size: 12px;
-  word-break: keep-all;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipse;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 body div#content.main section.outsite-slider {
