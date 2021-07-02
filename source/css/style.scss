@@ -823,9 +823,17 @@ body {
             }
 
             section.main-category {
+                position:relative;
+
                 div.container {
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    top:-154px;
+
                     ul {
                         list-style:none;
+                        overflow-x:scroll;
                         margin:0;
                         padding:0;
                         font-size:0;
@@ -842,6 +850,8 @@ body {
                                 background:#fff;
                                 margin-right:10px;
                                 @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
+                                text-align:center;
+                                
 
                             }
                         }
