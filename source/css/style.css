@@ -1916,6 +1916,8 @@ body div.download-pop div.outline button i {
 }
 
 body div#content {
+  display: inline-block;
+  width: 100%;
   position: relative;
   text-align: center;
   /* MAIN */
@@ -1936,17 +1938,169 @@ body div#content::before {
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
-body div#content.main section.main-issue div.container {
-  background: #eee;
-  text-align: center;
-  line-height: 300px;
-  height: 300px;
-  font-size: 100px;
+body div#content.main section.main-issue {
+  margin-top: 28px;
+  padding-bottom: 140px;
+  background: #E3E3E3;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25) inset;
 }
 
-body div#content.main section div.container {
-  height: 200px;
-  line-height: 1.4;
+body div#content.main section.main-issue div.container {
+  position: relative;
+  top: -28px;
+  padding: 0;
+  font-size: 0;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+body div#content.main section.main-issue div.container div.slider {
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.slider {
+    display: inline-block;
+    vertical-align: top;
+    width: 900px;
+    height: 420px;
+  }
+}
+
+body div#content.main section.main-issue div.container div.slider div.slide {
+  display: inline-block;
+}
+
+body div#content.main section.main-issue div.container div.slider div.slide img {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.pager {
+    display: inline-block;
+    vertical-align: top;
+    background: #F4F4F4;
+    -webkit-box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.25) inset;
+  }
+}
+
+body div#content.main section.main-issue div.container div.pager ul {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.pager ul {
+    position: static;
+    display: inline-block;
+  }
+}
+
+body div#content.main section.main-issue div.container div.pager ul li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px 0 0;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.pager ul li {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    border-radius: 0;
+    width: 300px;
+    height: 105px;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    cursor: pointer;
+    background: transparent;
+  }
+  body div#content.main section.main-issue div.container div.pager ul li:last-of-type {
+    border: none;
+  }
+  body div#content.main section.main-issue div.container div.pager ul li span {
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    margin: 0 0 14px;
+    font-style: normal;
+  }
+  body div#content.main section.main-issue div.container div.pager ul li i {
+    font-style: normal;
+  }
+  body div#content.main section.main-issue div.container div.pager ul li strong {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #563B84;
+  }
+}
+
+body div#content.main section.main-issue div.container div.pager ul li.on {
+  background: #222;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.pager ul li.on {
+    background: #fff;
+  }
+  body div#content.main section.main-issue div.container div.pager ul li.on::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 5px solid #423B84;
+  }
+  body div#content.main section.main-issue div.container div.pager ul li.on::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 10px solid transparent;
+    border-right-color: #423B84;
+    left: -20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+body div#content.main section.main-category div.container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  white-space: nowrap;
+}
+
+body div#content.main section.main-category div.container ul li {
+  display: inline-block;
+}
+
+body div#content.main section.main-category div.container ul li a {
+  display: block;
+  font-size: 14px;
+  width: 110px;
+  height: 136px;
+  background: #fff;
+  margin-right: 10px;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 body div#content.sub h4.stitle {

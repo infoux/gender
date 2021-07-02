@@ -14,9 +14,18 @@ $(function () {
             }
         });
     }
+    
+    function mainSlide() {
+        if (windowW < 1200) {
+            $(".main-issue .slider img").attr("src", $(".main-issue .slider img").attr("data-for-mobile"));
+        } else {
+            $(".main-issue .slider img").attr("src", $(".main-issue .slider img").attr("data-for-pc"));
+        }
+    }
+
 
     pcmenu();
-
+    mainSlide();
 
     $(window).on("resize", function(){
         
@@ -25,6 +34,10 @@ $(function () {
         
         $("nav#main-menu h3 a").unbind();
         pcmenu();
+
+
+        mainSlide();
+
     });
 
 
@@ -115,6 +128,43 @@ $(function () {
     });
 
 
+    var $mainIssue = $("section.main-issue div.slider");
+    $mainIssue.slick({
+        
+        autoplay:true,
+        speed: 1000,
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow:$('.outsite-slider button.right'),
+        prevArrow:$('.outsite-slider button.left'),
+
+        
+
+    });
+
+    $(".main-issue .pager li:first-child").addClass("on");
+
+    $(".main-issue .pager li").each(function(){
+        $(this).attr("data", $(this).index());
+    });
+
+    $mainIssue.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+
+        var pager = currentSlide + 1;
+        $(".main-issue .pager li").removeClass("on");
+        $(".main-issue .pager li:nth-child("+ pager +")").addClass("on");
+
+    });
+
+    $(".main-issue .pager li").on("click", function(){
+        // $(".main-issue .pager li").removeClass("on");
+        // $(this).addClass("on");
+        $mainIssue.slick("slickGoTo", $(this).attr("data"));
+
+        console.log($(this).attr("data"));
+    });
 
 
 
