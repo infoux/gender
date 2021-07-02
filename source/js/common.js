@@ -106,6 +106,16 @@ $(function () {
 
 
 
+    $(".micro-list button").on("click", function () {
+        $(".download-pop").addClass("on");
+    });
+
+    $(".download-pop button.close").on("click", function () {
+        $(".download-pop").removeClass("on");
+    });
+
+
+
 
 
 });

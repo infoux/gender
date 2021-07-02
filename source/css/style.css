@@ -1781,6 +1781,140 @@ body div.layer-pop div.outline button.close i {
   color: #fff;
 }
 
+body div.download-pop {
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body div.download-pop.on {
+  display: block;
+}
+
+body div.download-pop div.outline {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #fff;
+  padding: 0;
+  left: 20px;
+  right: 20px;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  body div.download-pop div.outline {
+    width: 700px;
+    left: 50%;
+    margin-left: -350px;
+    right: auto;
+  }
+}
+
+body div.download-pop div.outline h3 {
+  margin: 0 0 40px;
+  line-height: 60px;
+  background: #4D468B;
+  color: #fff;
+  padding: 0 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  word-break: keep-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+body div.download-pop div.outline h4 {
+  margin: 0 0 40px;
+  padding: 0 20px;
+  font-weight: 500;
+  font-size: 26px;
+  word-break: keep-all;
+}
+
+body div.download-pop div.outline h4 small {
+  display: block;
+  font-size: 20px;
+  padding: 10px 0 0;
+  font-weight: 200;
+}
+
+body div.download-pop div.outline div.check-outline {
+  background: #D5D5D5;
+  font-size: 0;
+  margin: 0 60px 60px;
+  padding: 6px;
+}
+
+@media (min-width: 1200px) {
+  body div.download-pop div.outline div.check-outline {
+    border-radius: 64px;
+    margin: 0 100px 60px;
+  }
+}
+
+body div.download-pop div.outline div.check-outline input {
+  display: none;
+}
+
+body div.download-pop div.outline div.check-outline label {
+  display: block;
+  font-size: 20px;
+  line-height: 64px;
+  background: transparent;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  body div.download-pop div.outline div.check-outline label {
+    display: inline-block;
+    width: calc(100% / 3);
+    border-radius: 64px;
+  }
+}
+
+body div.download-pop div.outline div.check-outline input:checked + label {
+  background: #4D468B;
+  color: #fff;
+  font-weight: 600;
+}
+
+body div.download-pop div.outline button {
+  vertical-align: top;
+  margin: 0 5px 30px;
+  height: 52px;
+  width: 150px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+body div.download-pop div.outline button.download {
+  background: #51843B;
+}
+
+body div.download-pop div.outline button.close {
+  background: #575757;
+}
+
+body div.download-pop div.outline button i {
+  position: relative;
+  top: 3px;
+  font-size: 20px;
+  margin: 0 6px 0 0;
+}
+
 body div#content {
   position: relative;
   text-align: center;
@@ -3025,6 +3159,203 @@ body div#content.sub article.theme-view div.information p {
   margin: 0;
   line-height: 1.6;
   word-break: keep-all;
+}
+
+body div#content.sub article.micro-list ul.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body div#content.sub article.micro-list ul.list > li {
+  position: relative;
+  padding: 30px 20px;
+  background: #FAFAFA;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-list ul.list > li {
+    padding: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+body div#content.sub article.micro-list ul.list > li h5 {
+  margin: 0;
+}
+
+body div#content.sub article.micro-list ul.list > li h5 a {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  word-break: keep-all;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-list ul.list > li h5 a {
+    font-size: 28px;
+    text-align: left;
+  }
+}
+
+body div#content.sub article.micro-list ul.list > li h5 a:hover {
+  text-decoration: underline;
+  color: #563B84;
+}
+
+body div#content.sub article.micro-list ul.list > li ul {
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+body div#content.sub article.micro-list ul.list > li ul li {
+  margin: 0 0 6px;
+}
+
+body div#content.sub article.micro-list ul.list > li ul li span {
+  display: inline-block;
+  width: 110px;
+  color: #555;
+}
+
+body div#content.sub article.micro-list ul.list > li ul li span i {
+  color: #999999;
+  margin-right: 6px;
+}
+
+body div#content.sub article.micro-list ul.list > li ul li strong {
+  font-weight: 500;
+}
+
+body div#content.sub article.micro-list ul.list > li > button {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  width: 154px;
+  line-height: 52px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+  background: #51843B;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-list ul.list > li > button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    font-size: 16px;
+    width: 193px;
+  }
+}
+
+body div#content.sub article.micro-list ul.list > li > button i {
+  position: relative;
+  top: 4px;
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+body div#content.sub article.micro-view div.files h5 {
+  font-size: 16px;
+  color: #fff;
+  padding: 0 20px;
+  background: #51843B;
+  font-weight: 500;
+  line-height: 50px;
+  margin: 0;
+}
+
+body div#content.sub article.micro-view div.files ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px 20px 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+body div#content.sub article.micro-view div.files ul li {
+  display: block;
+  min-height: 30px;
+  width: 100%;
+  text-align: right;
+}
+
+body div#content.sub article.micro-view div.files ul li a {
+  display: block;
+  margin: 0 0 10px;
+  float: left;
+  color: #0066CC;
+  text-decoration: underline;
+}
+
+body div#content.sub article.micro-view div.files ul li a i {
+  color: #555;
+  margin: 0 4px 0 0;
+}
+
+body div#content.sub article.micro-view div.files ul li span {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-view div.files ul li span {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 13px;
+  }
+}
+
+body div#content.sub article.micro-view dl.data {
+  margin: 30px 0 40px;
+  padding: 20px;
+  background: #FAFAFA;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-view dl.data {
+    margin: 30px 0 80px;
+    padding: 40px;
+    font-size: 16px;
+  }
+}
+
+body div#content.sub article.micro-view dl.data dt {
+  display: block;
+  font-weight: 200;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-view dl.data dt {
+    float: left;
+  }
+}
+
+body div#content.sub article.micro-view dl.data dd {
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-view dl.data dd {
+    margin: 0 0 30px 120px;
+  }
+}
+
+body div#content.sub article.micro-view dl.data dd a {
+  text-decoration: underline;
+  color: #0066CC;
 }
 
 body footer#footer {
