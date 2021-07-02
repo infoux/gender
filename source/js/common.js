@@ -30,6 +30,16 @@ $(function () {
 
 
 
+    $(".equality .item .outline>ul>li>strong").on("click", function () {
+        $(".equality .item .outline>ul>li>strong.on").removeClass("on");
+
+        if ($(this).hasClass) {
+            $(this).removeClass("on");
+        }
+        $(this).toggleClass("on");
+    });
+
+
     $("button.main-menu").on("click", function () {
         $("nav#main-menu").toggleClass("on");
     });
