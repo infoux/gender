@@ -683,6 +683,10 @@ body {
                 background:#E3E3E3;
                 @include inner-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
 
+                @media (min-width: $screen-size-pc) {
+                    padding-bottom:60px;
+                }
+
 
                 div.container {
                     position:relative;
@@ -825,11 +829,20 @@ body {
             section.main-category {
                 position:relative;
 
+                @media (min-width: $screen-size-pc) {
+                    margin-bottom:80px;
+                }
+
                 div.container {
                     position:absolute;
                     left:0;
                     right:0;
                     top:-154px;
+
+                    @media (min-width: $screen-size-pc) {
+                        top:-60px;
+                    }
+    
 
                     ul {
                         list-style:none;
@@ -838,6 +851,10 @@ body {
                         padding:0;
                         font-size:0;
                         white-space:nowrap;
+
+                        @media (min-width: $screen-size-pc) {
+                            overflow-x: unset;
+                        }
 
                         li {
                             display:inline-block;
@@ -851,6 +868,11 @@ body {
                                 margin-right:10px;
                                 @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
                                 text-align:center;
+
+                                @media (min-width: $screen-size-pc) {
+                                    margin-right:11px;
+                                }
+        
                                 
 
                             }
