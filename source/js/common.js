@@ -127,6 +127,14 @@ $(function () {
         $(".download-pop").removeClass("on");
     });
 
+    $(".micro-view .tabs button").on("click", function () {
+        $(".tab-contents").removeClass("on");
+
+        $(".tab-contents."+ $(this).attr("data")).addClass("on");
+        ;
+    });
+
+
 
     var $mainIssue = $("section.main-issue div.slider");
     $mainIssue.slick({

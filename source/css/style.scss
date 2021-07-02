@@ -2290,17 +2290,72 @@ body {
             }
 
             article.micro-view {
+                margin:0 0 40px;
 
-                div.files {
+                @media (min-width: $screen-size-pc) {
+                    margin:0 0 80px;
+                }
 
-                    h5 {
+                div.btn-set {
+                    text-align:right;
+                    margin:0 0 20px;
+                    
+                    a {
+                        display:inline-block;
+                        text-align:center;
+                        font-size:14px;
+                        line-height:46px;
+                        padding:0 20px;
+                        color:#222;
+                        font-weight:500;
+                        background:#eee;
+                        border:1px solid #ccc;
+                        margin-left:6px;
+
+                        i {
+                            position:relative;
+                            font-size:18px;
+                            top:3px;
+                            margin-right:6px;
+                        }
+
+                    }
+                }
+
+                div.tabs {
+                    position:relative;
                         font-size:16px;
                         color:#fff;
-                        padding:0 20px;
-                        background:#51843B;
+                        padding:10px 10px 0;
+                        background:#555;
                         font-weight:500;
-                        line-height:50px;
                         margin:0;
+
+                        button {
+                            height:46px;
+                            width:120px;
+                            border:none;
+                            background:#333;
+
+                            &.on {
+                                background:#fff;
+                                color:#222;
+                            }
+
+
+                        }
+
+ 
+
+                }
+
+
+                div.files {
+                    display:none;
+                    @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
+
+                    &.on {
+                        display:block;
                     }
 
                     ul {
@@ -2344,16 +2399,20 @@ body {
                 }
 
                 dl.data {
-                    margin:30px 0 40px;
+                    display:none;
+                    margin:0;
                     padding:20px;
-                    background:#FAFAFA;
                     border:1px solid #ccc;
+                    border-top:none;
                     @include drop-shadow($x:0,$y: 3px, $blur: 6px, $spread: 0, $alpha: 0.25);
 
                     @media (min-width: $screen-size-pc) {
-                        margin:30px 0 80px;
                         padding:40px;
                         font-size:16px;
+                    }
+
+                    &.on {
+                        display:block;
                     }
 
                     dt {

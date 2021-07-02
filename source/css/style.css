@@ -3460,14 +3460,71 @@ body div#content.sub article.micro-list ul.list > li > button i {
   margin-right: 6px;
 }
 
-body div#content.sub article.micro-view div.files h5 {
+body div#content.sub article.micro-view {
+  margin: 0 0 40px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.micro-view {
+    margin: 0 0 80px;
+  }
+}
+
+body div#content.sub article.micro-view div.btn-set {
+  text-align: right;
+  margin: 0 0 20px;
+}
+
+body div#content.sub article.micro-view div.btn-set a {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 46px;
+  padding: 0 20px;
+  color: #222;
+  font-weight: 500;
+  background: #eee;
+  border: 1px solid #ccc;
+  margin-left: 6px;
+}
+
+body div#content.sub article.micro-view div.btn-set a i {
+  position: relative;
+  font-size: 18px;
+  top: 3px;
+  margin-right: 6px;
+}
+
+body div#content.sub article.micro-view div.tabs {
+  position: relative;
   font-size: 16px;
   color: #fff;
-  padding: 0 20px;
-  background: #51843B;
+  padding: 10px 10px 0;
+  background: #555;
   font-weight: 500;
-  line-height: 50px;
   margin: 0;
+}
+
+body div#content.sub article.micro-view div.tabs button {
+  height: 46px;
+  width: 120px;
+  border: none;
+  background: #333;
+}
+
+body div#content.sub article.micro-view div.tabs button.on {
+  background: #fff;
+  color: #222;
+}
+
+body div#content.sub article.micro-view div.files {
+  display: none;
+  -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+}
+
+body div#content.sub article.micro-view div.files.on {
+  display: block;
 }
 
 body div#content.sub article.micro-view div.files ul {
@@ -3511,20 +3568,24 @@ body div#content.sub article.micro-view div.files ul li span {
 }
 
 body div#content.sub article.micro-view dl.data {
-  margin: 30px 0 40px;
+  display: none;
+  margin: 0;
   padding: 20px;
-  background: #FAFAFA;
   border: 1px solid #ccc;
+  border-top: none;
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 1200px) {
   body div#content.sub article.micro-view dl.data {
-    margin: 30px 0 80px;
     padding: 40px;
     font-size: 16px;
   }
+}
+
+body div#content.sub article.micro-view dl.data.on {
+  display: block;
 }
 
 body div#content.sub article.micro-view dl.data dt {
