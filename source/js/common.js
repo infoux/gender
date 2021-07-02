@@ -138,7 +138,22 @@ $(function () {
 
     var $mainIssue = $("section.main-issue div.slider");
     $mainIssue.slick({
+        arrows:false,
+        autoplay:true,
+        speed: 1000,
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
         
+
+    });
+
+    var $outsite = $("section.outsite-slider .slider");
+
+    $outsite.slick({
+        mobileFirst: true,
         autoplay:true,
         speed: 1000,
         dots: false,
@@ -148,9 +163,32 @@ $(function () {
         nextArrow:$('.outsite-slider button.right'),
         prevArrow:$('.outsite-slider button.left'),
 
-        
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    variableWidth:true,
+                    dotsClass: 'custom_paging',
+                    customPaging: function (slider, i) {
+                        //FYI just have a look at the object to find available information
+                        //press f12 to access the console in most browsers
+                        //you could also debug or look in the source
+                        var slideNumber   = (i + 1),
+                            totalSlides = slider.slideCount;
+                        return '<a class="custom-dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="string">' + slideNumber + '</span></a>';
+                    }
+
+                }
+            }
+        ]
+
+
 
     });
+
 
     $(".main-issue .pager li:first-child").addClass("on");
 

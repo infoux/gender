@@ -954,6 +954,226 @@ body {
                 }
             }
 
+            section.main-content {
+                padding:40px 0;
+
+
+                div.container {
+                    
+                    div.theme-chart {
+                        margin-bottom:30px;
+
+                        @media (min-width: $screen-size-pc) {
+                            display:inline-block;
+                            vertical-align:top;
+                            margin-bottom:0;
+                            width:860px;
+                            margin-right:40px;
+                        }
+
+                        h3.title {
+                            position:relative;
+                            font-size:22px;
+                            font-weight:600;
+                            margin:0 0 20px;
+
+                            div.btns {
+                                position:absolute;
+                                right:0;
+                                bottom:0;
+                                font-size:0;
+
+                                button {
+                                    border:none;
+                                    padding:0;
+                                    margin:0;
+                                    color:#ccc;
+                                    background:none;
+
+                                    &.on {
+                                        color:#333;
+                                    }
+
+                                    i {
+                                        font-size:32px;
+                                    }
+                                }
+                            }
+                        }
+
+                        div.chart-outline {
+                            background:#eee;
+                            height:180px;
+
+                            @media (min-width: $screen-size-pc) {
+                                height:259px;
+                            }
+    
+                        }
+                    }
+                    
+                    div.update-info {
+
+                        @media (min-width: $screen-size-pc) {
+                            display:inline-block;
+                            vertical-align:top;
+                            width:295px;
+                        }
+
+                        h3.title {
+                            position:relative;
+                            font-size:22px;
+                            font-weight:600;
+                            margin:0 0 20px;
+
+                            div.btns {
+                                position:absolute;
+                                right:0;
+                                bottom:0;
+                                font-size:0;
+
+                                a {
+                                    display:block;
+                                    color:#333;
+                                    background:none;
+
+                                    i {
+                                        font-size:32px;
+                                    }
+                                }
+                            }
+                        }
+
+                        ul.list {
+                            list-style:none;
+                            margin:0;
+                            padding:0;
+
+                            li {
+                                a {
+                                    display:block;
+                                    margin-bottom:10px;
+
+                                    strong {
+                                        display:block;
+                                        font-weight:500;
+                                        font-size:16px;
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden;
+                                        text-overflow:ellipse;
+                                        margin-bottom:5px;
+                                    }
+
+                                    span {
+                                        display:block;
+                                        font-size:12px;
+                                        word-break:keep-all;
+                                        white-space:nowrap;
+                                        overflow:hidden;
+                                        text-overflow:ellipse;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            section.outsite-slider {
+                background: #404040;
+                position: relative;
+                margin:0;
+    
+                @media (min-width: $screen-size-pc) {
+                    display: block;
+                    background: #fff;
+                    border-top:1px solid #ccc;
+                }
+    
+                div.container {
+    
+                    padding:20px 0;
+    
+                    @media (min-width: $screen-size-pc) {
+                        padding:10px 50px;
+                    }
+    
+                    div.slider {
+                        overflow: hidden;
+                        position: relative;
+    
+                        div.slides {
+                            display: inline-block;
+                            padding: 0 40px;
+                            vertical-align: top;
+    
+                            @media (min-width: $screen-size-pc) {
+                                padding: 0 16px;
+                                @include ani(0.5s);
+    
+                            }
+    
+                            a {
+                                display:block;
+                                color: #D5D5D5;
+                                text-align:center;
+                                @media (min-width: $screen-size-pc) {
+                                    font-size:0;
+    
+                                }
+    
+                                img {
+                                    display: none;
+                                    width: 152px;
+                                    height: 46px;
+    
+                                    @media (min-width: $screen-size-pc) {
+                                        display: block;
+                                    }
+                                }
+    
+                            }
+                        }
+                    }
+    
+    
+                    button.arrow {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin:0;
+                        padding: 0;
+                        border: none;
+                        font-size: 0;
+                        background:transparent;
+    
+                        i {
+                            font-size:20px;
+                            color:#fff;
+    
+                            @media (min-width: $screen-size-pc) {
+                                color:#A8A8A8;
+                                font-size:32px;
+                            }
+    
+                        }
+    
+                        &.left {
+                            left: 10px;
+    
+                        }
+    
+                        &.right {
+                            right: 10px;
+    
+                        }
+                    }
+                }
+    
+            }
+    
 
 
         }
