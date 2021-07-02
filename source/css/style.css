@@ -2129,7 +2129,7 @@ body div#content.main section.main-category div.container ul li {
 }
 
 body div#content.main section.main-category div.container ul li a {
-  display: block;
+  display: inline-block;
   font-size: 14px;
   width: 110px;
   height: 136px;
@@ -2138,12 +2138,67 @@ body div#content.main section.main-category div.container ul li a {
   -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
   text-align: center;
+  border: 5px solid transparent;
 }
 
 @media (min-width: 1200px) {
   body div#content.main section.main-category div.container ul li a {
     margin-right: 11px;
   }
+}
+
+body div#content.main section.main-category div.container ul li a::before {
+  content: "";
+  display: block;
+  margin: 24px auto;
+  width: 50px;
+  height: 50px;
+}
+
+body div#content.main section.main-category div.container ul li a:hover {
+  border-color: #FF9900;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+body div#content.main section.main-category div.container ul li a.category01::before {
+  background: url(../images/main-icon01.svg) no-repeat center/44px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category02::before {
+  background: url(../images/main-icon02.svg) no-repeat center/42.4px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category03::before {
+  background: url(../images/main-icon03.svg) no-repeat center/33.2px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category04::before {
+  background: url(../images/main-icon04.svg) no-repeat center/45px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category05::before {
+  background: url(../images/main-icon05.svg) no-repeat center/47.4px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category06::before {
+  background: url(../images/main-icon06.svg) no-repeat center/37.14px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category07::before {
+  background: url(../images/main-icon07.svg) no-repeat center/47px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category08::before {
+  background: url(../images/main-icon08.svg) no-repeat center/48px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category09::before {
+  background: url(../images/main-icon09.svg) no-repeat center/42.55px auto;
+}
+
+body div#content.main section.main-category div.container ul li a.category10::before {
+  background: url(../images/main-icon10.svg) no-repeat center/30.51px auto;
 }
 
 body div#content.sub h4.stitle {
@@ -3440,7 +3495,7 @@ body div#content.sub article.micro-list ul.list > li > button {
   border: none;
   color: #fff;
   margin: 0 auto;
-  background: #51843B;
+  background: #555;
 }
 
 @media (min-width: 1200px) {
