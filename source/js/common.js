@@ -135,6 +135,23 @@ $(function () {
     });
 
 
+    $(".find .find-type input").on("click", function () {
+        $(".find-form").removeClass("on");
+
+        if ($(this).attr("id") == "type01") {
+
+
+            $("div.form-id").addClass("on");
+
+        } else {
+
+            $("div.form-pw").addClass("on");
+
+        }
+    });
+
+
+
 
     var $mainIssue = $("section.main-issue div.slider");
     $mainIssue.slick({
