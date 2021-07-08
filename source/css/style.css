@@ -2028,9 +2028,59 @@ body div#content.main section.main-issue div.container div.slider div.slide img 
   width: 100%;
 }
 
+body div#content.main section.main-issue div.container div.slider ul.slick-dots {
+  position: absolute;
+  left: 20px;
+  bottom: 230px;
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 1200px) {
-  body div#content.main section.main-issue div.container div.pager {
+  body div#content.main section.main-issue div.container div.slider ul.slick-dots {
+    bottom: 20px;
+  }
+}
+
+body div#content.main section.main-issue div.container div.slider ul.slick-dots li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+body div#content.main section.main-issue div.container div.slider ul.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.slider ul.slick-dots li button {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+body div#content.main section.main-issue div.container div.slider ul.slick-dots li.slick-active button {
+  background: #423B84;
+}
+
+body div#content.main section.main-issue div.container div.etc-issue {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  background: #F4F4F4;
+  -webkit-box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+@media (min-width: 1200px) {
+  body div#content.main section.main-issue div.container div.etc-issue {
     display: inline-block;
+    width: auto;
     vertical-align: top;
     background: #F4F4F4;
     -webkit-box-shadow: 3px 0 6px 0 rgba(0, 0, 0, 0.25) inset;
@@ -2038,78 +2088,77 @@ body div#content.main section.main-issue div.container div.slider div.slide img 
   }
 }
 
-body div#content.main section.main-issue div.container div.pager ul {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+body div#content.main section.main-issue div.container div.etc-issue ul {
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 0;
-}
-
-@media (min-width: 1200px) {
-  body div#content.main section.main-issue div.container div.pager ul {
-    position: static;
-    display: inline-block;
-  }
-}
-
-body div#content.main section.main-issue div.container div.pager ul li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 4px 0 0;
-  border-radius: 50%;
-  background: #ccc;
+}
+
+body div#content.main section.main-issue div.container div.etc-issue ul li {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  border-radius: 0;
+  width: calc(100% / 2);
+  height: 105px;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  word-break: keep-all;
+}
+
+body div#content.main section.main-issue div.container div.etc-issue ul li:nth-child(2n) {
+  border-left: 1px solid #ccc;
 }
 
 @media (min-width: 1200px) {
-  body div#content.main section.main-issue div.container div.pager ul li {
+  body div#content.main section.main-issue div.container div.etc-issue ul li {
     display: block;
-    position: relative;
-    font-size: 14px;
-    border-radius: 0;
     width: 300px;
-    height: 105px;
-    margin: 0;
-    border-bottom: 1px solid #ccc;
     padding: 20px;
-    cursor: pointer;
-    background: transparent;
   }
-  body div#content.main section.main-issue div.container div.pager ul li:last-of-type {
+  body div#content.main section.main-issue div.container div.etc-issue ul li:last-of-type {
     border: none;
   }
-  body div#content.main section.main-issue div.container div.pager ul li span {
-    font-size: 16px;
-    font-weight: 500;
-    display: block;
-    margin: 0 0 14px;
-    font-style: normal;
-  }
-  body div#content.main section.main-issue div.container div.pager ul li i {
-    font-style: normal;
-  }
-  body div#content.main section.main-issue div.container div.pager ul li strong {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    font-size: 24px;
-    font-weight: 800;
-    color: #563B84;
+  body div#content.main section.main-issue div.container div.etc-issue ul li:nth-child(2n) {
+    border-left: none;
   }
 }
 
-body div#content.main section.main-issue div.container div.pager ul li.on {
+body div#content.main section.main-issue div.container div.etc-issue ul li span {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  margin: 0 0 14px;
+  font-style: normal;
+}
+
+body div#content.main section.main-issue div.container div.etc-issue ul li i {
+  font-style: normal;
+}
+
+body div#content.main section.main-issue div.container div.etc-issue ul li strong {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #563B84;
+}
+
+body div#content.main section.main-issue div.container div.etc-issue ul li.on {
   background: #222;
 }
 
 @media (min-width: 1200px) {
-  body div#content.main section.main-issue div.container div.pager ul li.on {
+  body div#content.main section.main-issue div.container div.etc-issue ul li.on {
     background: #fff;
   }
-  body div#content.main section.main-issue div.container div.pager ul li.on::before {
+  body div#content.main section.main-issue div.container div.etc-issue ul li.on::before {
     content: "";
     display: block;
     position: absolute;
@@ -2119,7 +2168,7 @@ body div#content.main section.main-issue div.container div.pager ul li.on {
     bottom: 0;
     border: 5px solid #423B84;
   }
-  body div#content.main section.main-issue div.container div.pager ul li.on::after {
+  body div#content.main section.main-issue div.container div.etc-issue ul li.on::after {
     content: "";
     display: block;
     position: absolute;

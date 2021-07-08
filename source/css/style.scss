@@ -761,12 +761,59 @@ body {
                             }
                         }
 
+                        ul.slick-dots {
+                            position:absolute;
+                            left:20px;
+                            bottom:230px;
+                            margin:0;
+                            padding:0;
+
+                            @media (min-width: $screen-size-pc) {
+                                bottom:20px;
+                            }
+
+                            li {
+                                display:inline-block;
+                                margin-right:5px;
+
+                                button {
+                                    width:10px;
+                                    height:10px;
+                                    margin:0;
+                                    padding:0;
+                                    border:none;
+                                    border-radius:50%;
+                                    background:#ccc;
+
+                                    @media (min-width: $screen-size-pc) {
+                                        width:14px;
+                                        height:14px;
+                                    }
+        
+
+                                }
+
+                                &.slick-active {
+                                    button {
+                                        background:#423B84;
+                                    }
+                                }
+                            }
+                        }
+
                     }
 
-                    div.pager {
+                    div.etc-issue {
+                        display:inline-block;
+                        width:100%;
+                        vertical-align:top;
+                        background:#F4F4F4;
+                        @include inner-shadow($x:3px,$y: 0, $blur: 6px, $spread: 0, $alpha: 0.25);
+
 
                         @media (min-width: $screen-size-pc) {
                             display:inline-block;
+                            width:auto;
                             vertical-align:top;
                             background:#F4F4F4;
                             @include inner-shadow($x:3px,$y: 0, $blur: 6px, $spread: 0, $alpha: 0.25);
@@ -774,67 +821,66 @@ body {
 
                         }
                         ul {
-                            position:absolute;
-                            bottom:20px;
-                            left:20px;
+                            width:100%;
                             list-style:none;
                             margin:0;
                             padding:0;
-                            font-size:0;
+                            display:inline-block;
 
-                            @media (min-width: $screen-size-pc) {
-                                position:static;
-                                display:inline-block;
-
-                            }
 
                             li {
                                 display:inline-block;
-                                width:10px;
-                                height:10px;
-                                margin:0 4px 0 0;
-                                border-radius:50%;
-                                background:#ccc;
+                                position:relative;
+                                font-size:14px;
+                                border-radius:0;
+                                width:calc(100% / 2);
+                                height:105px;
+                                margin:0;
+                                border-bottom:1px solid #ccc;
+                                padding:10px;
+                                cursor:pointer;
+                                background:transparent;
+                                word-break:keep-all;
+
+                                &:nth-child(2n) {
+                                    border-left:1px solid #ccc;
+                                }
 
                                 @media (min-width: $screen-size-pc) {
                                     display:block;
-                                    position:relative;
-                                    font-size:14px;
-                                    border-radius:0;
                                     width:300px;
-                                    height:105px;
-                                    margin:0;
-                                    border-bottom:1px solid #ccc;
                                     padding:20px;
-                                    cursor:pointer;
-                                    background:transparent;
 
                                     &:last-of-type {
                                         border:none;
                                     }
 
-                                    span {
-                                        font-size:16px;
-                                        font-weight:500;
-                                        display:block;
-                                        margin:0 0 14px;
-                                        font-style:normal;
-                                    }
-
-                                    i {
-                                        font-style:normal;
-                                    }
-
-                                    strong {
-                                        position:absolute;
-                                        right:20px;
-                                        bottom:20px;
-                                        font-size:24px;
-                                        font-weight:800;
-                                        color:#563B84;
-
+                                    &:nth-child(2n) {
+                                        border-left:none;
                                     }
     
+                                }
+
+                                span {
+                                    font-size:16px;
+                                    font-weight:500;
+                                    display:block;
+                                    margin:0 0 14px;
+                                    font-style:normal;
+                                }
+
+                                i {
+                                    font-style:normal;
+                                }
+
+                                strong {
+                                    position:absolute;
+                                    right:20px;
+                                    bottom:20px;
+                                    font-size:24px;
+                                    font-weight:800;
+                                    color:#563B84;
+
                                 }
 
                                 &.on {
