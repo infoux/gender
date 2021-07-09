@@ -2072,8 +2072,8 @@ body div.password-pop div.outline button {
   font-weight: 500;
 }
 
-body div.password-pop div.outline button.download {
-  background: #51843B;
+body div.password-pop div.outline button.ok {
+  background: #423B84;
 }
 
 body div.password-pop div.outline button.close {
