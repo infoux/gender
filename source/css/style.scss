@@ -3052,7 +3052,9 @@ body {
                     background:#f4f4f4;
 
                     @media (min-width: $screen-size-pc) {
-                        padding:20px 20px 10px 140px;
+                        padding:20px 20px 10px 100px;
+                        margin:0 0 -30px;
+                        background:none;
                     }
 
                     legend {
@@ -3063,7 +3065,7 @@ body {
                         font-weight:600;
 
                         @media (min-width: $screen-size-pc) {
-                            left:30px;
+                            left:0;
                             top:30px;
                         }
                     }
@@ -3079,12 +3081,13 @@ body {
 
                         @media (min-width: $screen-size-pc) {
                             width:auto;
+                            height:42px;
                         }
                     }
 
                     button {
                         width:100%;
-                        height:48px;
+                        height:42px;
                         border-radius:5px;
                         border:1px solid transparent;
                         padding:0 10px;
