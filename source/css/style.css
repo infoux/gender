@@ -4190,6 +4190,69 @@ body div#content.sub article.theme-view div.head p.info {
   }
 }
 
+body div#content.sub article.theme-view fieldset {
+  border: none;
+  position: relative;
+  padding: 50px 20px 10px;
+  margin: 0 0 30px;
+  background: #f4f4f4;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.theme-view fieldset {
+    padding: 20px 20px 10px 140px;
+  }
+}
+
+body div#content.sub article.theme-view fieldset legend {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.theme-view fieldset legend {
+    left: 30px;
+    top: 30px;
+  }
+}
+
+body div#content.sub article.theme-view fieldset select,
+body div#content.sub article.theme-view fieldset input {
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin: 0 0 10px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.theme-view fieldset select,
+  body div#content.sub article.theme-view fieldset input {
+    width: auto;
+  }
+}
+
+body div#content.sub article.theme-view fieldset button {
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0 10px;
+  margin: 0 0 10px;
+  background: #555;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.theme-view fieldset button {
+    width: 80px;
+  }
+}
+
 body div#content.sub article.theme-view div.chart {
   min-height: 274px;
   margin-bottom: 40px;
