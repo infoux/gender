@@ -1451,13 +1451,41 @@ body header .container h1 a small {
   }
 }
 
+body header .container button.main-search {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  width: 45px;
+  margin: 0;
+  padding: 0 0 0 5px;
+  font-size: 0;
+  border: none;
+  line-height: 62px;
+  background: #0E0752;
+}
+
+@media (min-width: 1200px) {
+  body header .container button.main-search {
+    right: 50px;
+    width: 50px;
+    line-height: 100px;
+  }
+}
+
+body header .container button.main-search i {
+  font-size: 28px;
+  color: #fff;
+  position: relative;
+  top: 10px;
+}
+
 body header .container button.main-menu {
   position: absolute;
   right: 0;
   top: 0;
-  width: 62px;
+  width: 45px;
   margin: 0;
-  padding: 0;
+  padding: 0 5px 0 0;
   font-size: 0;
   border: none;
   line-height: 62px;
@@ -1466,7 +1494,7 @@ body header .container button.main-menu {
 
 @media (min-width: 1200px) {
   body header .container button.main-menu {
-    width: 68px;
+    width: 50px;
     line-height: 100px;
   }
 }
@@ -1476,6 +1504,80 @@ body header .container button.main-menu i {
   color: #fff;
   position: relative;
   top: 10px;
+}
+
+body article.search-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  background: #333333;
+  z-index: 100002;
+  padding: 10px 20px;
+  font-size: 0;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body article.search-form {
+    text-align: center;
+    padding: 20px 20px;
+  }
+}
+
+body article.search-form input {
+  border: none;
+  vertical-align: top;
+  width: calc(100% - 50px);
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 50px 0 0 50px;
+  font-size: 14px;
+  outline: none;
+}
+
+@media (min-width: 1200px) {
+  body article.search-form input {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+body article.search-form button.search {
+  border: none;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 50px 50px 0;
+}
+
+body article.search-form button.search i {
+  font-size: 28px;
+}
+
+body article.search-form button.search-close {
+  border: none;
+  background: #333;
+  width: 90px;
+  height: 62px;
+  position: absolute;
+  right: -20px;
+  top: -72px;
+}
+
+@media (min-width: 1200px) {
+  body article.search-form button.search-close {
+    right: 0;
+    top: -120px;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+body article.search-form button.search-close i {
+  font-size: 38px;
+  color: #fff;
 }
 
 @media (max-width: 1199px) {
@@ -1635,7 +1737,7 @@ body header .container button.main-menu i {
     position: absolute;
     top: -86px;
     right: 50%;
-    margin-right: -490px;
+    margin-right: -470px;
     text-align: right;
   }
   body nav#main-menu div.tools a {
@@ -1647,7 +1749,7 @@ body header .container button.main-menu i {
     position: absolute;
     top: -70px;
     right: 50%;
-    margin-right: -540px;
+    margin-right: -520px;
   }
   body nav#main-menu div.menus > ul {
     list-style: none;
@@ -1674,7 +1776,8 @@ body header .container button.main-menu i {
     list-style: none;
     margin: 0;
     padding: 0;
-    left: 0;
+    left: -10px;
+    right: -45px;
     top: 100px;
     max-height: 0;
     overflow: hidden;
@@ -1723,7 +1826,7 @@ body div.layer-pop {
     right: auto;
     bottom: auto;
     width: 1200px;
-    height: 700px;
+    height: 800px;
     border: 5px solid #423B84;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1758,7 +1861,17 @@ body div.layer-pop div.outline {
   }
 }
 
-body div.layer-pop div.outline div.iframes {
+body div.layer-pop div.outline div.inline {
+  min-width: 800px;
+}
+
+@media (min-width: 1200px) {
+  body div.layer-pop div.outline div.inline {
+    min-width: auto;
+  }
+}
+
+body div.layer-pop div.outline div.inline div.iframes {
   position: absolute;
   left: 0;
   right: 0;
@@ -1766,7 +1879,7 @@ body div.layer-pop div.outline div.iframes {
   bottom: 0;
 }
 
-body div.layer-pop div.outline div.result {
+body div.layer-pop div.outline div.inline div.result {
   position: absolute;
   left: 0;
   right: 0;
@@ -1775,7 +1888,7 @@ body div.layer-pop div.outline div.result {
   overflow-y: scroll;
 }
 
-body div.layer-pop div.outline div.result h3 {
+body div.layer-pop div.outline div.inline div.result h3 {
   font-size: 16px;
   padding: 15px 10px;
   margin: 0;
@@ -1784,23 +1897,23 @@ body div.layer-pop div.outline div.result h3 {
   background: #f4f4f4;
 }
 
-body div.layer-pop div.outline div.result h3 strong {
+body div.layer-pop div.outline div.inline div.result h3 strong {
   color: #FF6600;
 }
 
-body div.layer-pop div.outline div.result ul {
+body div.layer-pop div.outline div.inline div.result ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body div.layer-pop div.outline div.result ul li a {
+body div.layer-pop div.outline div.inline div.result ul li a {
   display: block;
   padding: 20px 10px;
   border-bottom: 1px solid #ccc;
 }
 
-body div.layer-pop div.outline div.result ul li a strong {
+body div.layer-pop div.outline div.inline div.result ul li a strong {
   color: #FF6600;
 }
 
@@ -2664,6 +2777,11 @@ body div#content.sub h4.stitle {
   }
 }
 
+body div#content.sub h4.stitle span {
+  font-weight: 800;
+  color: #F4584A;
+}
+
 body div#content.sub article.login {
   border: 1px solid #ccc;
   margin: 0 auto 80px;
@@ -3081,6 +3199,118 @@ body div#content.sub article.sign button.btn.main {
 @media (min-width: 1200px) {
   body div#content.sub article.sign button.btn.main {
     height: 60px;
+  }
+}
+
+body div#content.sub article.search-result {
+  padding: 0 0 40px;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.search-result {
+    padding: 0 0 60px;
+  }
+}
+
+body div#content.sub article.search-result h5 {
+  padding: 20px;
+  background: #efefef;
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #222;
+  font-size: 14px;
+  word-break: keep-all;
+  font-weight: 400;
+  margin: 30px 0 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.search-result h5 {
+    font-size: 18px;
+  }
+}
+
+body div#content.sub article.search-result h5 span {
+  color: #F4584A;
+}
+
+body div#content.sub article.search-result h5 strong {
+  color: #0066CC;
+}
+
+body div#content.sub article.search-result ul.tabs {
+  list-style: none;
+  margin: 20px 0 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+body div#content.sub article.search-result ul.tabs li {
+  display: inline-block;
+  width: 50%;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.search-result ul.tabs li {
+    width: 25%;
+  }
+}
+
+body div#content.sub article.search-result ul.tabs li a {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ccc;
+  line-height: 48px;
+  margin: 2px;
+}
+
+body div#content.sub article.search-result ul.tabs li a.active {
+  background: #423B84;
+  color: #fff;
+  border-color: transparent;
+}
+
+body div#content.sub article.search-result ul.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body div#content.sub article.search-result ul.list li a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.search-result ul.list li a {
+    padding: 20px;
+  }
+}
+
+body div#content.sub article.search-result ul.list li a h6 {
+  margin: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.search-result ul.list li a h6 {
+    font-size: 16px;
+  }
+}
+
+body div#content.sub article.search-result ul.list li a h6 small {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 5px 0 0;
+}
+
+@media (min-width: 1200px) {
+  body div#content.sub article.search-result ul.list li a h6 small {
+    font-size: 14px;
   }
 }
 
@@ -4269,7 +4499,19 @@ body div#content.sub article.theme-view div.chart {
 
 @media (min-width: 1200px) {
   body div#content.sub article.theme-view div.chart {
-    min-height: 380px;
+    min-height: 400px;
+  }
+  body div#content.sub article.theme-view div.chart.count2 {
+    display: block;
+    float: left;
+    vertical-align: top;
+    width: calc(50% - 10px);
+  }
+  body div#content.sub article.theme-view div.chart.count3 {
+    display: block;
+    float: left;
+    vertical-align: top;
+    width: calc((100% - 40px) / 3);
   }
 }
 

@@ -40,6 +40,17 @@ $(function () {
 
     });
 
+    $("button.main-search").on("click", function(){
+        $("article.search-form").toggle();
+        $("nav#main-menu").removeClass("on");
+    });
+
+    $("button.search-close").on("click", function(){
+        $("article.search-form").toggle();
+    });
+
+
+
 
 
 
