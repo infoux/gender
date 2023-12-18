@@ -1269,7 +1269,7 @@ body header .container h1 a {
 }
 @media (min-width: 1200px) {
   body header .container h1 a {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 body header .container h1 a small {
@@ -1581,7 +1581,7 @@ body article.search-form button.search-close i {
   body nav#main-menu div.menus > ul > li h3 a {
     display: block;
     color: #fff;
-    margin-right: 50px;
+    margin-right: 44px;
     font-size: 18px;
     font-weight: 500;
   }
