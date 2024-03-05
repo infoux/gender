@@ -3645,7 +3645,7 @@ body div#content.sub article.equality div.item.right div.outline p.text::before 
   content: "";
   display: block;
   width: 318px;
-  height: 340px;
+  height: 378px;
   max-width: 100%;
   margin: 40px auto;
   background: url(../images/img-equality-right.svg) no-repeat center/100% auto;
@@ -3988,6 +3988,26 @@ body div#content.sub article.theme-view div.information p a i {
   position: relative;
   top: 2px;
   margin: 0 5px;
+}
+body div#content.sub div.micro-info h5 {
+  font-size: 18px;
+}
+@media (min-width: 1200px) {
+  body div#content.sub div.micro-info h5 {
+    font-size: 20px;
+  }
+}
+body div#content.sub div.micro-info p {
+  margin: 0;
+  line-height: 1.6;
+}
+body div#content.sub div.micro-info a {
+  display: block;
+  font-weight: 600;
+  padding: 20px 0;
+  font-size: 16px;
+  color: #0066CC;
+  text-decoration: underline;
 }
 body div#content.sub article.micro-list ul.list {
   list-style: none;
